@@ -1,2 +1,3 @@
 DATA_DIR = "Dataset"
 PROCESSED_DIR = "processed"
+TRAIN_TO_TEST_RATIO = 4
