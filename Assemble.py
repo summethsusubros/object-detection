@@ -1,6 +1,7 @@
 # Converting annotations from xml to csv format.
 %pylab inline
 
+import settings
 import os, sys, random
 import xml.etree.ElementTree as ET
 from glob import glob
@@ -27,6 +28,6 @@ for file in  annotations:
     cnt += 1
 
 data = pd.DataFrame(df, columns=['prev_filename', 'filename', 'cell_type','xmin', 'xmax', 'ymin', 'ymax'])
-
 data = data[['filename', 'cell_type', 'xmin', 'xmax', 'ymin', 'ymax']]
-data.to_csv('blood_cells',index = False)
+
+data.to_csv(os.path.join(settings.PROCESSED_DIR , 'blood_cells') , index = False)
