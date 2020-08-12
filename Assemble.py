@@ -1,4 +1,3 @@
-# Converting annotations from xml to csv format.
 %pylab inline
 
 import settings
